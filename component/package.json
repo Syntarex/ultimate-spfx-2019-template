@@ -6,8 +6,8 @@
     "types": "./lib/index.d.ts",
     "scripts": {
         "build": "bun run ./build.mjs",
-        "clean": "rimraf ./lib && rimraf ./serve",
-        "serve": "bun run --watch ./serve.mjs"
+        "clean": "rimraf ./lib",
+        "serve": "bun run --watch ./build.mjs"
     },
     "dependencies": {
         "@microsoft/sp-page-context": "1.4.1",
@@ -18,11 +18,13 @@
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "recoil": "0.7.7",
-        "use-error-boundary": "2.0.6"
+        "use-error-boundary": "2.0.6",
+        "zod": "3.22.4"
     },
     "devDependencies": {
-        "@babel/cli": "7.24.1",
         "@babel/core": "7.24.4",
+        "@babel/plugin-transform-object-rest-spread": "^7.24.1",
+        "@babel/plugin-transform-spread": "^7.24.1",
         "@babel/preset-env": "7.24.4",
         "@types/bun": "latest",
         "@types/lodash": "4.17.0",

@@ -47,13 +47,19 @@ importers:
       use-error-boundary:
         specifier: 2.0.6
         version: 2.0.6(react-dom@18.2.0)(react@18.2.0)
+      zod:
+        specifier: 3.22.4
+        version: 3.22.4
     devDependencies:
-      '@babel/cli':
-        specifier: 7.24.1
-        version: 7.24.1(@babel/core@7.24.4)
       '@babel/core':
         specifier: 7.24.4
         version: 7.24.4
+      '@babel/plugin-transform-object-rest-spread':
+        specifier: ^7.24.1
+        version: 7.24.1(@babel/core@7.24.4)
+      '@babel/plugin-transform-spread':
+        specifier: ^7.24.1
+        version: 7.24.1(@babel/core@7.24.4)
       '@babel/preset-env':
         specifier: 7.24.4
         version: 7.24.4(@babel/core@7.24.4)
@@ -142,26 +148,6 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
-    dev: true
-
-  /@babel/cli@7.24.1(@babel/core@7.24.4):
-    resolution: {integrity: sha512-HbmrtxyFUr34LwAlV9jS+sSIjUp4FpdtIMGwgufY3AsxrIfsh/HxlMTywsONAZsU0RMYbZtbZFpUCrSGs7o0EA==}
-    engines: {node: '>=6.9.0'}
-    hasBin: true
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-    dependencies:
-      '@babel/core': 7.24.4
-      '@jridgewell/trace-mapping': 0.3.25
-      commander: 4.1.1
-      convert-source-map: 2.0.0
-      fs-readdir-recursive: 1.1.0
-      glob: 7.2.3
-      make-dir: 2.1.0
-      slash: 2.0.0
-    optionalDependencies:
-      '@nicolo-ribaudo/chokidar-2': 2.1.8-no-fsevents.3
-      chokidar: 3.6.0
     dev: true
 
   /@babel/code-frame@7.24.2:
@@ -1950,12 +1936,6 @@ packages:
       argparse: 1.0.10
       colors: 1.1.2
     dev: true
-
-  /@nicolo-ribaudo/chokidar-2@2.1.8-no-fsevents.3:
-    resolution: {integrity: sha512-s88O1aVtXftvp5bCPB7WnmXc5IwOZZ7YPuwNPt+GtOOXpPvad1LfbmjYv+qII7zP6RU2QGnqve27dnLycEnyEQ==}
-    requiresBuild: true
-    dev: true
-    optional: true
 
   /@pnp/common@2.5.0:
     resolution: {integrity: sha512-ea4zTNC3sjLolrHZXP+/2SrJM+yC8PygmPW/yRfgbErdvdwYMUSogT69dW+NUaqhkfYZfkkAoWn42irlLMSpdw==}
@@ -4108,11 +4088,6 @@ packages:
       graceful-readlink: 1.0.1
     dev: true
 
-  /commander@4.1.1:
-    resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
-    engines: {node: '>= 6'}
-    dev: true
-
   /commondir@1.0.1:
     resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
     dev: true
@@ -6003,10 +5978,6 @@ packages:
       graceful-fs: 4.2.11
       jsonfile: 4.0.0
       universalify: 0.1.2
-    dev: true
-
-  /fs-readdir-recursive@1.1.0:
-    resolution: {integrity: sha512-GNanXlVr2pf02+sPN40XN8HG+ePaNcvM0q5mZBd668Obwb0yD5GiUbZOFgwn8kGMY6I3mdyDJzieUy3PTYyTRA==}
     dev: true
 
   /fs-write-stream-atomic@1.0.10:
@@ -11417,11 +11388,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /slash@2.0.0:
-    resolution: {integrity: sha512-ZYKh3Wh2z1PpEXWr0MpSBZ0V6mZHAQfYevttO11c51CaWjGTaadiKZ+wVt1PbMlDV5qhMFslpZCemhwOK7C89A==}
-    engines: {node: '>=6'}
-    dev: true
-
   /snapdragon-node@2.1.1:
     resolution: {integrity: sha512-O27l4xaMYt/RSQ5TR3vpWCAB5Kb/czIcqUFOM/C4fYcLnbZUc1PkjTAMjof2pBWaSTwOUd6qUHcFGVGj7aIwnw==}
     engines: {node: '>=0.10.0'}
@@ -13553,3 +13519,7 @@ packages:
       validator: 8.2.0
     optionalDependencies:
       commander: 2.20.3
+
+  /zod@3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+    dev: false

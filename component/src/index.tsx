@@ -1,21 +1,15 @@
 import type { WebPartContext } from "@microsoft/sp-webpart-base";
 import React from "react";
-import { createRoot, type Root } from "react-dom/client";
+import { Root, createRoot } from "react-dom/client";
+import { Main } from "./component/main";
+import { WebpartProperties } from "./model/webpart-properties.model";
 
 let root: Root | null = null;
 
-export const render = (context: WebPartContext) => {
+export const render = (context: WebPartContext, webpartProperties: WebpartProperties) => {
     if (!root) {
         root = createRoot(context.domElement);
     }
 
-    root.render(
-        <p
-            onClick={() => {
-                throw new Error("TEST");
-            }}
-        >
-            Super mega World 10
-        </p>,
-    );
+    root.render(<Main webpartProperties={webpartProperties} />);
 };

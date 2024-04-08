@@ -20,4 +20,3 @@ obj
 *.crt
 *.key
 .turbo
-serve
