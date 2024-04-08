@@ -8,6 +8,9 @@ interface WebpartPropertiesProviderProps {
     value: WebpartProperties;
 }
 
+/**
+ * Sets given webpart properties in a recoil atom and enables the useWebpartProperties() hook.
+ */
 export const WebpartPropertiesProvider = ({ children, value }: WebpartPropertiesProviderProps) => {
     // Sets webpart properties in atom to access them everywhere
     const setWebpartProperties = useSetRecoilState(webpartPropertiesAtom);

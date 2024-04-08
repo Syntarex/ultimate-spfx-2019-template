@@ -8,6 +8,9 @@ interface LocalsProviderProps {
     value: Locals;
 }
 
+/**
+ * Sets given locals in a recoil atom and enables the useLocals() hook.
+ */
 export const LocalsProvider = ({ children, value }: LocalsProviderProps) => {
     // Sets locals in atom to access them everywhere
     const setLocals = useSetRecoilState(localsAtom);
