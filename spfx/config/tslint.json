@@ -1,0 +1,5 @@
+{
+    "removeExistingRules": true,
+    "useDefaultConfigAsBase": false,
+    "lintConfig": {}
+}

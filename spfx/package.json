@@ -1,0 +1,29 @@
+{
+    "name": "webpart",
+    "version": "0.0.1",
+    "private": true,
+    "main": "lib/index.js",
+    "scripts": {
+        "build": "gulp bundle --ship && gulp package-solution --ship",
+        "clean": "gulp clean && rimraf ./sharepoint/solution && rimraf ./release",
+        "serve": "gulp bundle && gulp package-solution && gulp serve --nobrowser"
+    },
+    "dependencies": {
+        "@microsoft/sp-loader": "1.4.1",
+        "@microsoft/sp-webpart-base": "1.4.1",
+        "component": "workspace:*",
+        "lodash": "4.17.21"
+    },
+    "devDependencies": {
+        "@microsoft/sp-build-web": "1.4.1",
+        "@microsoft/sp-module-interfaces": "1.4.1",
+        "@types/lodash": "4.14.177",
+        "@types/webpack-env": "1.18.4",
+        "gulp": "3.9.1",
+        "sass": "1.74.1",
+        "terser-webpack-plugin-legacy": "1.2.5",
+        "typescript": "5.4.4",
+        "webpack": "5.91.0",
+        "webpack-merge": "5.10.0"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "root",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "build": "turbo run build",
+        "clean": "turbo run clean",
+        "serve": "turbo run serve"
+    },
+    "devDependencies": {
+        "rimraf": "3.0.2",
+        "turbo": "1.13.2"
+    },
+    "pnpm": {
+        "overrides": {
+            "graceful-fs": "4.2.11"
+        }
+    }
+}

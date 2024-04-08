@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "lib": ["ESNext", "DOM"],
+        "module": "ESNext",
+        "moduleDetection": "force",
+        "jsx": "react",
+        "moduleResolution": "bundler",
+        "outDir": "./lib",
+        "noEmit": true,
+        "allowJs": true,
+        "declaration": true,
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true,
+        "allowImportingTsExtensions": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "noFallthroughCasesInSwitch": true
+    },
+    "include": ["./src/**/*"]
+}

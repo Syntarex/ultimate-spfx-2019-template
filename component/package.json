@@ -1,0 +1,37 @@
+{
+    "name": "component",
+    "version": "0.0.1",
+    "private": true,
+    "module": "./lib/index.js",
+    "types": "./lib/index.d.ts",
+    "scripts": {
+        "build": "bun run ./build.mjs",
+        "clean": "rimraf ./lib && rimraf ./serve",
+        "serve": "bun run --watch ./serve.mjs"
+    },
+    "dependencies": {
+        "@microsoft/sp-page-context": "1.4.1",
+        "@microsoft/sp-webpart-base": "1.4.1",
+        "@pnp/sp": "2.5.0",
+        "dayjs": "1.11.10",
+        "lodash": "4.17.21",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "recoil": "0.7.7",
+        "use-error-boundary": "2.0.6"
+    },
+    "devDependencies": {
+        "@babel/cli": "7.24.1",
+        "@babel/core": "7.24.4",
+        "@babel/preset-env": "7.24.4",
+        "@types/bun": "latest",
+        "@types/lodash": "4.17.0",
+        "@types/react": "18.2.74",
+        "@types/react-dom": "18.2.24",
+        "bun-plugin-dts-auto": "0.10.0",
+        "core-js": "3.36.1",
+        "serve-static-bun": "0.5.3",
+        "type-fest": "4.15.0",
+        "typescript": "5.4.4"
+    }
+}
