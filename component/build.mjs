@@ -19,14 +19,7 @@ console.info("✅ Bundling completed");
 // Down-compile ESNext to ES5 so the webpart can bundle it in production
 const result = await babel.transformFileAsync("./lib/index.js", {
     compact: false, // because the bundle includes all dependencies, we will reach the 500KB limit of compact
-    plugins: [
-        ["@babel/plugin-transform-spread"],
-        ["@babel/plugin-transform-object-rest-spread", { useBuiltIns: true }],
-    ],
-    assumptions: {
-        setSpreadProperties: true,
-        iterableIsArray: true,
-    },
+    presets: ["@babel/preset-env"],
 });
 
 if (!result) {
