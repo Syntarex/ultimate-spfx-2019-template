@@ -5,10 +5,10 @@ import { Main } from "./component/main";
 
 let root: Root | null = null;
 
-export const render = (context: WebPartContext, webpartProperties: any, locals: any) => {
+export const render = (webpartContext: WebPartContext, webpartProperties: any, locals: any) => {
     if (!root) {
-        root = createRoot(context.domElement);
+        root = createRoot(webpartContext.domElement);
     }
 
-    root.render(<Main webpartProperties={webpartProperties} locals={locals} />);
+    root.render(<Main webpartContext={webpartContext} webpartProperties={webpartProperties} locals={locals} />);
 };
