@@ -1,27 +1,25 @@
-import serveStatic from "serve-static-bun";
-
 // Watch index file so hot reload works
 require("./src/index");
 
+// Bundling serve version
 await Bun.build({
     entrypoints: ["./src/index.tsx"],
     target: "browser",
     outdir: "./serve",
+    sourcemap: "external",
 });
 
 console.info("✅ Bundling completed");
 
-const cert = Bun.file("../ssl.crt");
-const key = Bun.file("../ssl.key");
+// Make sure to import this file in your webpart or extension
+// to make sure spfx serve will reload after changing a file in /component
+const signalFile = Bun.file("../spfx/src/hot-reload.ts");
 
-const https = (await cert.exists()) && (await key.exists());
+// Save hot-reload.ts without changing, will trigger reload of spfx serve
+if (await signalFile.exists()) {
+    await Bun.write(signalFile, await signalFile.text());
 
-if (!https) {
-    console.warn("🟡 SSL is disabled! See README.md for more information.");
+    console.info("✅ Signal to reload webpart sent");
 } else {
-    console.info("✅ SSL is activated");
+    console.warn("🟡 Cannot send signal to reload webpart because /spfx/src/hot-reload.ts is missing");
 }
-
-Bun.serve({ fetch: serveStatic("./serve"), cert: https ? cert : undefined, key: https ? key : undefined });
-
-console.info(`✅ Serve started: http${https ? "s" : ""}://localhost:3000/index.js`);

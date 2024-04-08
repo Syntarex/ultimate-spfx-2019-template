@@ -9,5 +9,13 @@ export const render = (context: WebPartContext) => {
         root = createRoot(context.domElement);
     }
 
-    root.render(<p>Helloflkwejf World</p>);
+    root.render(
+        <p
+            onClick={() => {
+                throw new Error("TEST");
+            }}
+        >
+            Super mega World 10
+        </p>,
+    );
 };
