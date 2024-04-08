@@ -1,7 +1,7 @@
 import React, { ReactNode, useEffect } from "react";
 import { useSetRecoilState } from "recoil";
 import { localsAtom } from "../../data/locals.data";
-import { Locals } from "../../model/locals.model";
+import { Locals, LocalsSchema } from "../../model/locals.model";
 
 interface LocalsProviderProps {
     children: ReactNode;
@@ -15,9 +15,9 @@ export const LocalsProvider = ({ children, value }: LocalsProviderProps) => {
     // Sets locals in atom to access them everywhere
     const setLocals = useSetRecoilState(localsAtom);
 
-    // Set locals
+    // Set locals and validate them by using zod
     useEffect(() => {
-        setLocals(value);
+        setLocals(LocalsSchema.parse(value));
     }, [value]);
 
     return <>{children}</>;
