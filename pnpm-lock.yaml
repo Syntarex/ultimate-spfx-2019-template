@@ -23,6 +23,9 @@ importers:
       '@fluentui/react-components':
         specifier: 9.47.5
         version: 9.47.5(@types/react-dom@18.2.24)(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)
+      '@fluentui/react-icons':
+        specifier: 2.0.234
+        version: 2.0.234(react@18.2.0)
       '@microsoft/sp-page-context':
         specifier: 1.4.1
         version: 1.4.1
