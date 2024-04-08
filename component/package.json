@@ -10,6 +10,7 @@
         "serve": "bun run --watch ./build.mjs"
     },
     "dependencies": {
+        "@fluentui/react-components": "9.47.5",
         "@microsoft/sp-page-context": "1.4.1",
         "@microsoft/sp-webpart-base": "1.4.1",
         "@pnp/sp": "2.5.0",
@@ -23,8 +24,6 @@
     },
     "devDependencies": {
         "@babel/core": "7.24.4",
-        "@babel/plugin-transform-object-rest-spread": "^7.24.1",
-        "@babel/plugin-transform-spread": "^7.24.1",
         "@babel/preset-env": "7.24.4",
         "@types/bun": "latest",
         "@types/lodash": "4.17.0",
