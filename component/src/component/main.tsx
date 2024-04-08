@@ -2,6 +2,7 @@ import { WebPartContext } from "@microsoft/sp-webpart-base";
 import React from "react";
 import { Locals } from "../model/locals.model";
 import { WebpartProperties } from "../model/webpart-properties.model";
+import { Loading } from "./common/loading.component";
 import { FluentUiProvider } from "./provider/fluent-ui-provider.component";
 import { LocalsProvider } from "./provider/locals-provider.component";
 import { PnpProvider } from "./provider/pnp-provider.component";
@@ -22,7 +23,9 @@ export const Main = ({ webpartContext, webpartProperties, locals }: MainProps) =
                 <WebpartPropertiesProvider value={webpartProperties}>
                     <LocalsProvider value={locals}>
                         <FluentUiProvider>
-                            <Test />
+                            <Loading>
+                                <Test />
+                            </Loading>
                         </FluentUiProvider>
                     </LocalsProvider>
                 </WebpartPropertiesProvider>
