@@ -10,7 +10,8 @@
             "dependsOn": ["^clean"]
         },
         "serve": {
-            "cache": false
+            "cache": false,
+            "dependsOn": ["^build"]
         }
     }
 }

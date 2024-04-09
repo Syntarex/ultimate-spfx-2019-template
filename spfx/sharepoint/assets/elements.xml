@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field
+        ID="{90c46d9a-f661-11ee-98d6-12c190008589}"
+        Name="USpfxDescription"
+        DisplayName="Description"
+        Group="Ultimate SPFx 2019"
+        Type="Text"
+        Required="FALSE"
+    />
+
+    <Field
+        ID="{1735b810-f663-11ee-b73d-12c190008589}"
+        Name="USpfxPhoneNumber"
+        DisplayName="Phone"
+        Group="Ultimate SPFx 2019"
+        Type="Text"
+        Required="FALSE"
+        MaxLength="30"
+    />
+
+    <Field
+        ID="{6d96bebc-f662-11ee-9263-12c190008589}"
+        Name="USpfxImage"
+        DisplayName="Image"
+        Group="Ultimate SPFx 2019"
+        Type="URL"
+        Required="FALSE"
+        Format="Image"
+    />
+
+    <Field
+        ID="{1e3bd91e-f663-11ee-a7f7-12c190008589}"
+        Name="USpfxWebsite"
+        DisplayName="Website"
+        Group="Ultimate SPFx 2019"
+        Type="URL"
+        Required="FALSE"
+        Format="Hyperlink"
+    />
+
+    <ContentType
+        ID="0x0100CEADAD40C6630B489BDF172555628DA0"
+        Name="USpfxCompany"
+        Group="Ultimate SPFx 2019"
+        Description="Describes a company"
+    >
+        <FieldRefs>
+            <FieldRef ID="{90c46d9a-f661-11ee-98d6-12c190008589}" />
+
+            <FieldRef ID="{1735b810-f663-11ee-b73d-12c190008589}" />
+
+            <FieldRef ID="{6d96bebc-f662-11ee-9263-12c190008589}" />
+
+            <FieldRef ID="{1e3bd91e-f663-11ee-a7f7-12c190008589}" />
+        </FieldRefs>
+    </ContentType>
+
+    <ListInstance
+        CustomSchema="schema.xml"
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="Companies"
+        Description="Manage your companies"
+        TemplateType="100"
+        Url="Lists/Companies"
+    >
+    </ListInstance>
+</Elements>

@@ -2,10 +2,22 @@
     "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
     "solution": {
         "name": "Ultimate SPFx 2019",
-        "id": "344fc738-f519-11ee-8214-12c190008588",
+        "id": "444fc738-f519-11ee-8214-12c190008588",
         "version": "0.0.1.0",
         "includeClientSideAssets": true,
-        "skipFeatureDeployment": false
+        "skipFeatureDeployment": false,
+        "features": [
+            {
+                "title": "ultimate-spfx-2019",
+                "description": "Deploys fields, content-type and lists",
+                "id": "523ff887-ced5-4036-b564-8dad5c6c6e22",
+                "version": "1.0.0.0",
+                "assets": {
+                    "elementManifests": ["elements.xml"],
+                    "elementFiles": ["schema.xml"]
+                }
+            }
+        ]
     },
     "paths": {
         "zippedPackage": "solution/ultimate-spfx-2019.sppkg"
