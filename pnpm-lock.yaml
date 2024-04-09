@@ -41,9 +41,6 @@ importers:
       dayjs:
         specifier: 1.11.10
         version: 1.11.10
-      lodash:
-        specifier: 4.17.21
-        version: 4.17.21
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -51,7 +48,7 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
       react-hook-form:
-        specifier: ^7.51.2
+        specifier: 7.51.2
         version: 7.51.2(react@18.2.0)
       recoil:
         specifier: 0.7.7
@@ -72,9 +69,6 @@ importers:
       '@types/bun':
         specifier: latest
         version: 1.0.12
-      '@types/lodash':
-        specifier: 4.17.0
-        version: 4.17.0
       '@types/react':
         specifier: 18.2.74
         version: 18.2.74
@@ -3512,10 +3506,6 @@ packages:
 
   /@types/lodash@4.14.74:
     resolution: {integrity: sha512-BZknw3E/z3JmCLqQVANcR17okqVTPZdlxvcIz0fJiJVLUCbSH1hK3zs9r634PVSmrzAxN+n/fxlVRiYoArdOIQ==}
-
-  /@types/lodash@4.17.0:
-    resolution: {integrity: sha512-t7dhREVv6dbNj0q17X12j7yDG4bD/DHYX7o5/DbDxobP0HnGPgpRz2Ej77aL7TZT3DSw13fqUTj8J4mMnqa7WA==}
-    dev: true
 
   /@types/log4js@2.3.5:
     resolution: {integrity: sha512-SwF8LkSHqHy9A8GQ67NAYJiGl8zzP4Qtx65Wa+IOxDGdMHxKeoQZjg7m2M1erIT6VK0DYHpu2aTbdLkdkuMHjw==}
