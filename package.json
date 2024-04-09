@@ -8,6 +8,7 @@
         "serve": "turbo run serve"
     },
     "devDependencies": {
+        "@prettier/plugin-xml": "^3.4.1",
         "rimraf": "3.0.2",
         "turbo": "1.13.2"
     },
@@ -15,5 +16,16 @@
         "overrides": {
             "graceful-fs": "4.2.11"
         }
+    },
+    "prettier": {
+        "semi": true,
+        "trailingComma": "all",
+        "doubleQuote": true,
+        "printWidth": 120,
+        "tabWidth": 4,
+        "endOfLine": "lf",
+        "plugins": [
+            "@prettier/plugin-xml"
+        ]
     }
 }
