@@ -1,5 +1,5 @@
 define([], function () {
     return {
-        headline: "Deutsch",
+        headline: "Firmen",
     };
 });
