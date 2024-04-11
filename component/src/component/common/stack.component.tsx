@@ -3,6 +3,7 @@ import { Property } from "csstype";
 import React, { ReactNode } from "react";
 
 interface StackProps {
+    className?: string;
     children?: ReactNode;
     direction?: Property.FlexDirection;
     wrap?: Property.FlexWrap;
@@ -14,6 +15,7 @@ interface StackProps {
  * A helper component to build a flexbox layout.
  */
 export const Stack = ({
+    className,
     children,
     direction = "column",
     wrap = "nowrap",
@@ -22,6 +24,7 @@ export const Stack = ({
 }: StackProps) => {
     return (
         <div
+            className={className}
             style={{
                 // makeStyles doesn't support conditional css attributes so to make it easier, I'm using inline styles
                 display: "flex",
