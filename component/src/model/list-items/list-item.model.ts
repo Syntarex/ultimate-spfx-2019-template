@@ -2,7 +2,6 @@ import { z } from "zod";
 
 export const ListItemSchema = z.object({
     ID: z.number().optional(),
-    Title: z.string(),
     Created: z.string().optional(),
     Modified: z.string().optional(),
 });

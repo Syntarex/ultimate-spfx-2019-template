@@ -2,6 +2,7 @@ import { Title1, makeStyles, tokens } from "@fluentui/react-components";
 import React from "react";
 import { useLocals } from "../data/locals.data";
 import { Loading } from "./common/loading.component";
+import { CompanyForm } from "./company/company-form.component";
 import { CompanyGrid } from "./company/company-grid.component";
 
 const useStyles = makeStyles({
@@ -23,6 +24,19 @@ export const Test = () => {
 
             <Loading>
                 <CompanyGrid />
+            </Loading>
+
+            <Loading>
+                <CompanyForm
+                    value={{
+                        Title: "",
+                        USpfxDescription: null,
+                        USpfxImage: null,
+                        USpfxPhoneNumber: null,
+                        USpfxWebsite: null,
+                    }}
+                    onSubmit={(value) => alert(JSON.stringify(value))}
+                />
             </Loading>
         </div>
     );
