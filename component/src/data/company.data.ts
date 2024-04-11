@@ -1,6 +1,5 @@
 import { sp } from "@pnp/sp";
 import { selector } from "recoil";
-import { z } from "zod";
 import { Company, CompanySchema } from "../model/list-items/company.model";
 
 // This was set by <ListInstance> in /spfx/sharepoint/elements.xml
@@ -19,6 +18,6 @@ export const companiesSelector = selector<Company[]>({
             .get();
 
         // Validate response so we know our models are still in sync with our list
-        return z.array(CompanySchema).parse(listItems);
+        return listItems;
     },
 });
