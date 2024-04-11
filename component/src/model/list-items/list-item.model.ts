@@ -13,7 +13,7 @@ export type ListItem = z.infer<typeof ListItemSchema>;
 
 export const UrlFieldSchema = z.object({
     Description: z.string(),
-    Url: z.string(),
+    Url: z.string().url("Please provide a valid url"),
 });
 
 /**

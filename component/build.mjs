@@ -9,7 +9,6 @@ await Bun.build({
     entrypoints: ["./src/index.tsx"],
     target: "browser",
     outdir: "./lib",
-    minify: true,
     sourcemap: "external",
     plugins: [dts()],
 });
