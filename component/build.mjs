@@ -25,6 +25,7 @@ if (!result) {
     throw new Error("Babel transform failed");
 }
 
+// Save down-compiled javascript code
 await Bun.write(Bun.file("./lib/index.js"), result.code);
 
 console.info("✅ Transforming completed");
