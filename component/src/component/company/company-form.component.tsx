@@ -1,7 +1,6 @@
 import { Button, Input } from "@fluentui/react-components";
-import { useFormik } from "formik";
-import { isObject } from "radash";
-import React, { useCallback, useEffect } from "react";
+import { getIn, useFormik } from "formik";
+import React from "react";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 import { Company, CompanySchema } from "../../model/list-items/company.model";
 import { Stack } from "../common/stack.component";
@@ -13,6 +12,7 @@ interface CompanyFormProps {
 }
 
 export const CompanyForm = ({ value, onSubmit }: CompanyFormProps) => {
+    // Using formik allows us to handle forms easily
     const { handleChange, handleSubmit, handleBlur, values, errors, touched, resetForm, setFieldValue } =
         useFormik<Company>({
             initialValues: value,
@@ -20,22 +20,6 @@ export const CompanyForm = ({ value, onSubmit }: CompanyFormProps) => {
             validationSchema: toFormikValidationSchema(CompanySchema),
             onSubmit,
         });
-
-    useEffect(() => console.log(errors), [errors]);
-
-    const onUrlFieldChange = useCallback(
-        (ev: React.ChangeEvent<HTMLInputElement>, fieldName: string) =>
-            setFieldValue(
-                fieldName,
-                !ev.target.value
-                    ? null
-                    : {
-                          Description: ev.target.value,
-                          Url: ev.target.value,
-                      },
-            ),
-        [setFieldValue],
-    );
 
     return (
         <form onSubmit={handleSubmit}>
@@ -52,14 +36,13 @@ export const CompanyForm = ({ value, onSubmit }: CompanyFormProps) => {
                 <FormGroup
                     label={"Website"}
                     helperText={"A logo or some kind of banner will do."}
-                    // TODO: I hate that the zod-adapter puts the error in an object. It makes sense but it breaks Formiks typing.
-                    error={isObject(errors.USpfxWebsite) ? (errors.USpfxWebsite as any)?.Url : errors.USpfxWebsite}
+                    error={getIn(errors, "USpfxWebsite.Url")}
                     touched={touched.USpfxWebsite}
                 >
                     <Input
-                        name={"USpfxWebsite"}
+                        name={"USpfxWebsite.Url"}
                         value={values.USpfxWebsite?.Url ?? ""}
-                        onChange={(ev) => onUrlFieldChange(ev, "USpfxWebsite")}
+                        onChange={handleChange}
                         onBlur={handleBlur}
                     />
                 </FormGroup>
@@ -95,14 +78,13 @@ export const CompanyForm = ({ value, onSubmit }: CompanyFormProps) => {
                 <FormGroup
                     label={"Picture"}
                     helperText={"A logo or some kind of banner will do."}
-                    // TODO: I hate that the zod-adapter puts the error in an object. It makes sense but it breaks Formiks typing.
-                    error={isObject(errors.USpfxImage) ? (errors.USpfxImage as any)?.Url : errors.USpfxImage}
+                    error={getIn(errors, "USpfxImage.Url")}
                     touched={touched.USpfxImage}
                 >
                     <Input
-                        name={"USpfxImage"}
+                        name={"USpfxImage.Url"}
                         value={values.USpfxImage?.Url ?? ""}
-                        onChange={(ev) => onUrlFieldChange(ev, "USpfxImage")}
+                        onChange={handleChange}
                         onBlur={handleBlur}
                     />
                 </FormGroup>
