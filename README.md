@@ -21,15 +21,7 @@ TBD
 
 ## TODOs
 
--   eslint in component
+-   eslint in component (+@tanstack/eslint-plugin-query)
 -   docs
 -   clean up dist in webpart because every hot reload does a copy of component package
 -   sourcemapping of component package doesnt work
-
-Verhalten wird einsortiert (Trauma, PTBS, ADHS)
-Gestern sehr unfokusiert, entsprechend schroffes Feedback
-Laute Reaktion von Patrick triggert
-Ab hier Training -> Aus Situation entfernen, Starke Zurückhaltung, Automatische Antworten bei Stellungnahme, Anfrage auf Gespräch ablehnen
-Therapeut
-Für mich fühlt sich ADHS als Ausrede an, entsprechend nicht kommuniziert - Meine Lektion ist, dass ich das kommunizieren soll, da es einfach die Realität ist und ich dem gegenüber die Situation so trotzdem einfacher mache
-Und sorry für die Art der Kommunikation
