@@ -1,12 +1,16 @@
+import { useQuery } from "@tanstack/react-query";
 import React from "react";
-import { useRecoilValue } from "recoil";
-import { companiesSelector } from "../../data/company.data";
+import { companiesQuery } from "../../data/company.data";
 import { Stack } from "../common/stack.component";
 import { CompanyCard } from "./company-card.component";
 
 export const CompanyGrid = () => {
     // Fetch companies
-    const companies = useRecoilValue(companiesSelector);
+    const { data: companies } = useQuery(companiesQuery);
+
+    if (!companies) {
+        return null;
+    }
 
     return (
         <Stack direction={"row"}>
