@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "wiggin77.codedox",
+        "redhat.vscode-yaml",
+        "rencoregmbh.vscode-spfx-deploy-package",
+        "esbenp.prettier-vscode",
+        "editorconfig.editorconfig"
+    ]
+}
