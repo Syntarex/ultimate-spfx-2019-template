@@ -15,7 +15,8 @@ import { Company } from "../../model/list-items/company.model";
 
 const useStyles = makeStyles({
     card: {
-        width: "360px",
+        minWidth: "340px",
+        maxWidth: "420px",
     },
     headerImage: {
         ...shorthands.borderRadius("4px"),

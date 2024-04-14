@@ -4,7 +4,7 @@ import { queryClient } from "../component/provider/query-provider.component";
 import { Company, CompanySchema } from "../model/list-items/company.model";
 
 // This was set by <ListInstance> in /spfx/sharepoint/elements.xml
-const companyListId = "7611dde8-a800-47b3-9980-a18e2794485d";
+const listTitle = "Companies";
 
 /**
  * Fetches all list items of the companies sharepoint list.
@@ -17,7 +17,7 @@ export const companiesQuery: UseQueryOptions<Company[]> = {
 
         // Fetching companies
         const listItems = await sp.web.lists
-            .getById(companyListId)
+            .getByTitle(listTitle)
             .items.select(...select)
             .get();
 
@@ -31,7 +31,7 @@ export const companiesQuery: UseQueryOptions<Company[]> = {
 export const upsertCompanyMutation: UseMutationOptions<Company, Error, Company> = {
     mutationKey: ["companies"],
     mutationFn: async (value: Company) => {
-        const result = await sp.web.lists.getById(companyListId).items.add(value);
+        const result = await sp.web.lists.getByTitle(listTitle).items.add(value);
 
         return result.data;
     },

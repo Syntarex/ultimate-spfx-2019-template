@@ -60,7 +60,6 @@
         CustomSchema="schema.xml"
         FeatureId="00bfea71-de22-43b2-a848-c05709900100"
         Title="Companies"
-        Id="7611dde8-a800-47b3-9980-a18e2794485d"
         Description="Manage your companies"
         TemplateType="100"
         Url="Lists/Companies"
