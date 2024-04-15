@@ -17,7 +17,6 @@
     "devDependencies": {
         "@microsoft/sp-build-web": "1.4.1",
         "@microsoft/sp-module-interfaces": "1.4.1",
-        "@microsoft/sp-module-loader": "^0.5.1",
         "@types/lodash": "4.14.177",
         "@types/webpack-env": "1.18.4",
         "gulp": "3.9.1",
