@@ -26,3 +26,4 @@ TBD
 -   clean up dist in webpart because every hot reload does a copy of component package
 -   sourcemapping of component package doesnt work
 -   property pane
+-   test clean clone (postinstall scrpt of sass errors?)
