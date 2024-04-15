@@ -9,7 +9,6 @@
         "serve": "gulp bundle && gulp package-solution && gulp serve --nobrowser"
     },
     "dependencies": {
-        "@microsoft/sp-loader": "1.4.1",
         "@microsoft/sp-webpart-base": "1.4.1",
         "component": "workspace:*",
         "lodash": "4.17.21"

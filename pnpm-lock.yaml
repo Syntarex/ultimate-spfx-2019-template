@@ -105,9 +105,6 @@ importers:
 
   spfx:
     dependencies:
-      '@microsoft/sp-loader':
-        specifier: 1.4.1
-        version: 1.4.1
       '@microsoft/sp-webpart-base':
         specifier: 1.4.1
         version: 1.4.1
