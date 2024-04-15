@@ -22,3 +22,22 @@ export const UrlFieldSchema = z.object({
  * An url field of a list item.
  */
 export type UrlField = z.infer<typeof UrlFieldSchema>;
+
+/**
+ * The sharepoint api returns an array of ids.
+ * Because we may want to send back an object to sharepoint, we have to capsulate those in an object.
+ */
+export const MultiLookupFieldSchema = z
+    .number()
+    .array()
+    .transform((ids) => {
+        return {
+            results: ids,
+        };
+    });
+
+/**
+ * An multi-lookup field of a list item.
+ * You always should fetch the corresponding Id field.
+ */
+export type MultiLookupField = z.infer<typeof MultiLookupFieldSchema>;
