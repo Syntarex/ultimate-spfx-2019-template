@@ -19,9 +19,9 @@
         "@types/lodash": "4.14.177",
         "@types/webpack-env": "1.18.4",
         "gulp": "3.9.1",
-        "sass": "1.74.1",
+        "sass": "1.75.0",
         "terser-webpack-plugin-legacy": "1.2.5",
-        "typescript": "5.4.4",
+        "typescript": "5.4.5",
         "webpack": "5.91.0",
         "webpack-merge": "5.10.0"
     }

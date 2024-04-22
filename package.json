@@ -8,8 +8,8 @@
         "serve": "turbo run serve"
     },
     "devDependencies": {
-        "@prettier/plugin-xml": "^3.4.1",
-        "rimraf": "3.0.2",
+        "@prettier/plugin-xml": "3.4.1",
+        "rimraf": "5.0.5",
         "turbo": "1.13.2"
     },
     "pnpm": {
