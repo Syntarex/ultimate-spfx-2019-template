@@ -4,7 +4,8 @@ import { Root, createRoot } from "react-dom/client";
 import { Main } from "./component/main";
 
 // Importing tailwind styles will add tailwind to the bundle
-import "./global.css";
+import "./style/global.css";
+import "./style/theme.css";
 
 let root: Root | null = null;
 
