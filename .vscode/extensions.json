@@ -6,6 +6,7 @@
         "christian-kohler.path-intellisense",
         "esbenp.prettier-vscode",
         "bradlc.vscode-tailwindcss",
-        "redhat.vscode-yaml"
+        "redhat.vscode-yaml",
+        "better-ts-errors.better-ts-errors"
     ]
 }

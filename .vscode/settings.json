@@ -24,5 +24,6 @@
         "**/coverage": true,
         "**/lib-amd": true,
         "**/*.scss.ts": true
-    }
+    },
+    "betterTypeScriptErrors.prettify": true
 }
