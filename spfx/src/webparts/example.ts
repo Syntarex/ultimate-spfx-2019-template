@@ -1,21 +1,16 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
 import strings from "ExampleStrings";
 import { render } from "component";
+import styles from "./example.module.scss";
 
-import "component/dist/index.css";
-
-export default class ExampleWebPart extends BaseClientSideWebPart<{}> {
+export default class ExampleWebPart extends BaseClientSideWebPart<any> {
     public async onInit() {
-        console.info("onInit");
+        // Add tailwindcss to webpart
+        this.domElement.classList.add(styles.example);
     }
 
     public render(): void {
-        console.info("render");
-
+        // Render your react application
         render(this.context, this.properties, strings);
-    }
-
-    protected onDispose(): void {
-        console.log("onDispose");
     }
 }

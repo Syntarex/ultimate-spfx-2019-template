@@ -14,3 +14,4 @@ TBD
 -   @arethetypeswrong/cli
 -   assets
 -   sorucemaps
+-   https://fluent2.microsoft.design/typography

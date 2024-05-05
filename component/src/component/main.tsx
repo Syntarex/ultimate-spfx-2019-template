@@ -40,7 +40,7 @@ export const Main: React.FC<{
                             <LocalsProvider value={locals}>
                                 <Catch>
                                     <Loading>
-                                        <Button className={"bg-indigo-500"} label={"Test"} />
+                                        <Button label="Test" />
                                         <Rating value={5} />
                                         <Knob value={4} max={8} />
                                         <p className="text-2xl">Hello World</p>
