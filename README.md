@@ -1,4 +1,4 @@
-# Ultimate SPFx 2019
+# Ultimate SPFx Starter
 
 TBD
 
@@ -15,3 +15,4 @@ TBD
 -   assets
 -   sorucemaps
 -   https://fluent2.microsoft.design/typography
+-   [DEP0066] DeprecationWarning: OutgoingMessage.prototype.\_headers is deprecated

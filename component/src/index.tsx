@@ -1,10 +1,12 @@
+// Add tailwind to the bundle
+import "./style/global.css";
+
 import type { WebPartContext } from "@microsoft/sp-webpart-base";
 import React from "react";
 import { Root, createRoot } from "react-dom/client";
 import { Main } from "./component/main";
-
-// Add tailwind to the bundle
-import "./style/global.css";
+import { Locals } from "./model/locals";
+import { WebpartProperties } from "./model/webpart-properties";
 
 // The root of your react application
 let root: Root | null = null;
@@ -15,7 +17,11 @@ let root: Root | null = null;
  * @param webpartProperties Your webpart properties. You can get them by calling `this.properties` in a `BaseClientSideWebPart`.
  * @param locals Your localized strings. {@link https://learn.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/localize-web-parts See SPFx Documentation}
  */
-export const render = (webpartContext: WebPartContext, webpartProperties: any, locals: any) => {
+export const render = (
+    webpartContext: WebPartContext,
+    webpartProperties: WebpartProperties,
+    locals: Locals,
+) => {
     // Setup webpart's domElement as react root
     if (!root) {
         root = createRoot(webpartContext.domElement);
@@ -32,3 +38,6 @@ export const render = (webpartContext: WebPartContext, webpartProperties: any, l
         </React.StrictMode>,
     );
 };
+
+export { Locals } from "./model/locals";
+export { WebpartProperties } from "./model/webpart-properties";

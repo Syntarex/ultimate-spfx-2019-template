@@ -24,7 +24,8 @@
     },
     "pnpm": {
         "overrides": {
-            "@types/mime": "3.0.4"
+            "@types/mime": "3.0.4",
+            "graceful-fs": "4.2.11"
         }
     }
 }
