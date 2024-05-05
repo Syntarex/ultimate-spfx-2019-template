@@ -2,6 +2,8 @@ import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
 import strings from "ExampleStrings";
 import { render } from "component";
 
+import "component/dist/index.css";
+
 export default class ExampleWebPart extends BaseClientSideWebPart<{}> {
     public async onInit() {
         console.info("onInit");

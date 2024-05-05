@@ -1,17 +1,28 @@
 {
     "typescript.tsdk": "./node_modules/typescript/lib",
-    "editor.formatOnSave": true,
+    "npm.packageManager": "pnpm",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "editor.codeActionsOnSave": {
         "source.organizeImports": "explicit"
     },
-    "files.eol": "\n",
     "editor.tabSize": 4,
     "git.inputValidation": true,
     "git.inputValidationLength": 72,
     "git.inputValidationSubjectLength": 50,
-    "npm.packageManager": "pnpm"
+    "files.eol": "\n",
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/bower_components": true,
+        "**/coverage": true,
+        "**/lib-amd": true,
+        "**/*.scss.ts": true
+    }
 }

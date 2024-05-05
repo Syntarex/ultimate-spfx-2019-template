@@ -1,10 +1,11 @@
 {
     "recommendations": [
+        "editorconfig.editorconfig",
         "dbaeumer.vscode-eslint",
-        "wiggin77.codedox",
-        "redhat.vscode-yaml",
-        "rencoregmbh.vscode-spfx-deploy-package",
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense",
         "esbenp.prettier-vscode",
-        "editorconfig.editorconfig"
+        "bradlc.vscode-tailwindcss",
+        "redhat.vscode-yaml"
     ]
 }
