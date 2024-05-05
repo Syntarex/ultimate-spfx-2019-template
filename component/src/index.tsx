@@ -1,12 +1,12 @@
 // Add tailwind to the bundle
 import "./style/global.css";
 
+import { Main } from "@/component/main";
+import { Locals } from "@/model/locals";
+import { WebpartProperties } from "@/model/webpart-properties";
 import type { WebPartContext } from "@microsoft/sp-webpart-base";
 import React from "react";
 import { Root, createRoot } from "react-dom/client";
-import { Main } from "./component/main";
-import { Locals } from "./model/locals";
-import { WebpartProperties } from "./model/webpart-properties";
 
 // The root of your react application
 let root: Root | null = null;

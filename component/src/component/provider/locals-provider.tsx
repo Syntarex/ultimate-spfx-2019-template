@@ -1,5 +1,5 @@
+import { Locals, LocalsSchema } from "@/model/locals";
 import React, { ReactNode, createContext, useMemo } from "react";
-import { Locals, LocalsSchema } from "../../model/locals";
 
 export const LocalsContext = createContext<Locals | null>(null);
 

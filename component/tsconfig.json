@@ -8,7 +8,10 @@
         "allowJs": true,
         "strict": true,
         "skipLibCheck": true,
-        "noFallthroughCasesInSwitch": true
+        "noFallthroughCasesInSwitch": true,
+        "paths": {
+            "@/*": ["./src/*"]
+        }
     },
     "include": ["./src/**/*"]
 }

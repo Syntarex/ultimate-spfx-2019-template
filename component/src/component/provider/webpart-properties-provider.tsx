@@ -1,5 +1,5 @@
+import { WebpartProperties, WebpartPropertiesSchema } from "@/model/webpart-properties";
 import React, { ReactNode, createContext, useMemo } from "react";
-import { WebpartProperties, WebpartPropertiesSchema } from "../../model/webpart-properties";
 
 export const WebpartPropertiesContext = createContext<WebpartProperties | null>(null);
 
