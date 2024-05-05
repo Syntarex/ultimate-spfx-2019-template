@@ -10,5 +10,11 @@ export const render = (webpartContext: WebPartContext, webpartProperties: any, l
         root = createRoot(webpartContext.domElement);
     }
 
-    root.render(<Main webpartContext={webpartContext} webpartProperties={webpartProperties} locals={locals} />);
+    root.render(
+        <Main
+            webpartContext={webpartContext}
+            webpartProperties={webpartProperties}
+            locals={locals}
+        />,
+    );
 };

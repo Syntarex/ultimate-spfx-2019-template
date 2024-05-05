@@ -2,10 +2,10 @@ import { z } from "zod";
 
 export const ListItemSchema = z.object({
     ID: z.number().optional(),
+    AuthorId: z.number().optional(),
+    EditorId: z.number().optional(),
     Created: z.string().optional(),
-    CreatedBy: z.string().optional(),
     Modified: z.string().optional(),
-    ModifiedBy: z.string().optional(),
 });
 
 /**
@@ -14,8 +14,8 @@ export const ListItemSchema = z.object({
 export type ListItem = z.infer<typeof ListItemSchema>;
 
 export const UrlFieldSchema = z.object({
-    Description: z.string().default(""),
-    Url: z.string().url("Please provide a valid url"),
+    Description: z.string(),
+    Url: z.string().url("Please provide a valid url."),
 });
 
 /**
@@ -24,8 +24,9 @@ export const UrlFieldSchema = z.object({
 export type UrlField = z.infer<typeof UrlFieldSchema>;
 
 /**
+ * A multi lookup field of a list item.
  * The sharepoint api returns an array of ids.
- * Because we may want to send back an object to sharepoint, we have to capsulate those in an object.
+ * Because we may want to send back an object to sharepoint, we have to capsulate this array in an object.
  */
 export const MultiLookupFieldSchema = z
     .number()

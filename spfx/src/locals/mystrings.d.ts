@@ -1,8 +1,8 @@
-declare interface IWebpartStrings {
-    headline: string;
+declare interface IExampleStrings {
+    example: string;
 }
 
-declare module "WebpartStrings" {
-    const strings: IWebpartStrings;
+declare module "ExampleStrings" {
+    const strings: IExampleStrings;
     export = strings;
 }

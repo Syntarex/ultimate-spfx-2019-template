@@ -1,14 +1,12 @@
 import React, { ReactNode } from "react";
 import { RecoilRoot } from "recoil";
 
-interface RecoilProviderProps {
-    children: ReactNode;
-}
-
 /**
- * Initializes recoil.
+ * Initializes Recoil.
  * https://recoiljs.org
  */
-export const RecoilProvider = ({ children }: RecoilProviderProps) => {
+export const RecoilInitializer: React.FC<{
+    children: ReactNode;
+}> = ({ children }) => {
     return <RecoilRoot>{children}</RecoilRoot>;
 };

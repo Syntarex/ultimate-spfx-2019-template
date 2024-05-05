@@ -1,6 +1,6 @@
 {
-    "name": "root",
-    "version": "0.0.1",
+    "name": "ultimate-spfx-starter",
+    "version": "1.0.0",
     "private": true,
     "scripts": {
         "build": "turbo run build",
@@ -9,23 +9,22 @@
     },
     "devDependencies": {
         "@prettier/plugin-xml": "3.4.1",
-        "rimraf": "5.0.5",
-        "turbo": "1.13.2"
-    },
-    "pnpm": {
-        "overrides": {
-            "graceful-fs": "4.2.11"
-        }
+        "turbo": "1.13.3"
     },
     "prettier": {
         "semi": true,
         "trailingComma": "all",
         "doubleQuote": true,
-        "printWidth": 120,
+        "printWidth": 100,
         "tabWidth": 4,
         "endOfLine": "lf",
         "plugins": [
             "@prettier/plugin-xml"
         ]
+    },
+    "pnpm": {
+        "overrides": {
+            "@types/mime": "3.0.4"
+        }
     }
 }

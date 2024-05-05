@@ -1,41 +1,47 @@
 import { WebPartContext } from "@microsoft/sp-webpart-base";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React from "react";
-import { Locals } from "../model/locals.model";
-import { WebpartProperties } from "../model/webpart-properties.model";
-import { Catch } from "./common/catch.component";
-import { Loading } from "./common/loading.component";
-import { FluentUiProvider } from "./provider/fluent-ui-provider.component";
-import { LocalsProvider } from "./provider/locals-provider.component";
-import { PnpProvider } from "./provider/pnp-provider.component";
-import { QueryProvider } from "./provider/query-provider.component";
-import { RecoilProvider } from "./provider/recoil-provider.component";
-import { WebpartPropertiesProvider } from "./provider/webpart-properties-provider.component";
-import { Test } from "./test";
+import { Locals } from "../model/locals";
+import { WebpartProperties } from "../model/webpart-properties";
+import { Catch } from "./common/catch";
+import { Loading } from "./common/loading";
+import { LocalsProvider } from "./provider/locals-provider";
+import { PnPInitializer } from "./provider/pnp-initializer";
+import { RecoilInitializer } from "./provider/recoil-initializer";
+import { WebpartPropertiesProvider } from "./provider/webpart-properties-provider";
 
-interface MainProps {
+// The QueryClient instance all of our queries and mutations will use.
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
+            throwOnError: true, // enables use of react's error boundary
+        },
+        mutations: {
+            throwOnError: true,
+        },
+    },
+});
+
+export const Main: React.FC<{
     webpartContext: WebPartContext;
     webpartProperties: WebpartProperties;
     locals: Locals;
-}
-
-export const Main = ({ webpartContext, webpartProperties, locals }: MainProps) => {
+}> = ({ webpartContext, webpartProperties, locals }) => {
     return (
-        <QueryProvider>
-            <PnpProvider webpartContext={webpartContext}>
-                <RecoilProvider>
+        <QueryClientProvider client={queryClient}>
+            <PnPInitializer webpartContext={webpartContext}>
+                <RecoilInitializer>
                     <WebpartPropertiesProvider value={webpartProperties}>
                         <LocalsProvider value={locals}>
-                            <FluentUiProvider>
-                                <Catch>
-                                    <Loading>
-                                        <Test />
-                                    </Loading>
-                                </Catch>
-                            </FluentUiProvider>
+                            <Catch>
+                                <Loading>
+                                    <p>Hello World</p>
+                                </Loading>
+                            </Catch>
                         </LocalsProvider>
                     </WebpartPropertiesProvider>
-                </RecoilProvider>
-            </PnpProvider>
-        </QueryProvider>
+                </RecoilInitializer>
+            </PnPInitializer>
+        </QueryClientProvider>
     );
 };

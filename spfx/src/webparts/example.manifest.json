@@ -1,6 +1,6 @@
 {
     "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-    "id": "f5bde44a-f529-11ee-8d03-12c190008588",
+    "id": "c1cecf56-0a94-11ef-a3a2-12c190008589",
     "alias": "ExampleWebPart",
     "componentType": "WebPart",
     "version": "*",
@@ -9,9 +9,11 @@
     "preconfiguredEntries": [
         {
             "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
-            "title": { "default": "Ultimate SPFx 2019" },
-            "description": { "default": "A example webpart provided by the Utimate SPFx 2019 template" },
-            "officeFabricIconFontName": "ViewList",
+            "title": { "default": "Ultimate SPFx Starter" },
+            "description": {
+                "default": "A example webpart provided by the Utimate SPFx Starter"
+            },
+            "officeFabricIconFontName": "Info",
             "properties": {}
         }
     ]

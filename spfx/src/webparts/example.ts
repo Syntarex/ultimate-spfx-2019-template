@@ -1,9 +1,8 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
-import strings from "WebpartStrings";
+import strings from "ExampleStrings";
 import { render } from "component";
-import "../hot-reload";
 
-export default class ListWebPart extends BaseClientSideWebPart<{}> {
+export default class ExampleWebPart extends BaseClientSideWebPart<{}> {
     public async onInit() {
         console.info("onInit");
     }

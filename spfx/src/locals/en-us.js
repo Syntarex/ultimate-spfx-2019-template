@@ -1,5 +1,5 @@
 define([], function () {
     return {
-        headline: "Companies",
+        example: "Ultimate SPFx Starter",
     };
 });

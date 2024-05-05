@@ -2,16 +2,16 @@
     "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
     "version": "2.0",
     "bundles": {
-        "web-part": {
+        "webpart": {
             "components": [
                 {
-                    "entrypoint": "./lib/webparts/example.webpart.js",
+                    "entrypoint": "./lib/webparts/example.js",
                     "manifest": "./src/webparts/example.manifest.json"
                 }
             ]
         }
     },
     "localizedResources": {
-        "WebpartStrings": "lib/locals/{locale}.js"
+        "ExampleStrings": "lib/locals/{locale}.js"
     }
 }
