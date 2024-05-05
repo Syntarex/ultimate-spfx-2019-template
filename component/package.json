@@ -16,12 +16,12 @@
         "@pnp/sp": "2.5.0",
         "@tanstack/react-query": "5.34.1",
         "dayjs": "1.11.11",
-        "primereact": "^10.6.5",
+        "primereact": "10.6.5",
         "radash": "12.1.0",
         "react": "18.3.1",
         "react-dom": "18.3.1",
         "recoil": "0.7.7",
-        "tailwindcss-animate": "^1.0.7",
+        "tailwindcss-animate": "1.0.7",
         "use-error-boundary": "2.0.6",
         "zod": "3.23.6"
     },
@@ -30,10 +30,10 @@
         "@types/node": "20.12.2",
         "@types/react": "18.3.1",
         "@types/react-dom": "18.3.0",
-        "autoprefixer": "^10.4.19",
-        "postcss": "^8.4.38",
+        "autoprefixer": "10.4.19",
+        "postcss": "8.4.38",
         "rimraf": "5.0.5",
-        "tailwindcss": "^3.4.3",
+        "tailwindcss": "3.4.3",
         "tsup": "8.0.2",
         "typescript": "5.4.5"
     }
